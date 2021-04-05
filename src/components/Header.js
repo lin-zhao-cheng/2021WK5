@@ -5,7 +5,6 @@ import { StoreContext } from "../store"
 import NavBar from "./NavBar";
 import products from "../json/products.json";
 
-
 export default function Header({title}) {
    const { dispatch } = useContext(StoreContext);
    const onClickHeader = () => {
