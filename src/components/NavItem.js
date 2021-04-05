@@ -1,7 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { SET_PAGE_TITLE, SET_PAGE_CONTENT, SET_NAVBAR_ACTIVEITEM } from "../utils/constants"
+import {
+   PAGE_TITLE_SET,
+   PAGE_CONTENT_SET,
+   NAVBAR_ITEM_SET,
+} from "../utils/constants"
 import { StoreContext } from "../store"
+
 import products from "../json/products.json";
 import textile from "../json/textile.json";
 import cookware from "../json/cookware.json";
@@ -35,15 +40,15 @@ export default function NavItem(props) {
    const onClick = () => {
       console.log(children)
       dispatch({
-         type: SET_PAGE_TITLE, 
+         type: PAGE_TITLE_SET,
          payload: children,
       });
       dispatch({
-         type: SET_PAGE_CONTENT, 
+         type: PAGE_CONTENT_SET,
          payload: getJSON(to),
       });
       dispatch({
-         type: SET_NAVBAR_ACTIVEITEM, 
+         type: NAVBAR_ITEM_SET,
          payload: to,
       });
    };

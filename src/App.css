@@ -197,9 +197,16 @@ body {
 }
 
 .cart-image img{
-  max-width: 4rem;
-  max-height: 4rem;
+  max-width: 8rem;
+  max-height: 8rem;
   flex: 1 1;
+  border-radius: 2%;
+  justify-items: center;
+}
+
+.cart-item-info {
+  display: flex;
+  align-items: center;
 }
 
 .cart-item-content {
@@ -218,6 +225,11 @@ body {
   opacity: 0.6;
   text-align: right;
   cursor: pointer;
+  margin-left: 1rem;
+}
+
+.cart-item-end {
+  display: flex;
 }
 
 .cart-total-price-wrap {display: flex; justify-content: space-between;}
@@ -523,4 +535,9 @@ span.ham-menu-bar3--touch {
   .product-image {
     height: 24rem;
   }
+}
+
+/* need resolve */
+.flex-8-1 {
+  flex: 8 1;
 }
